@@ -13,7 +13,7 @@ function TaskEntries() {
       <ul className='flex flex-wrap p-6'>
         {
           todos?.map(({ text }, index) => (
-            <li className='m-1 p-6 border-2 border-black bg-yellow-200 rounded-md min-w-[150px] max-w-sm h-auto text-center text-2xl'
+            <li className='m-1 p-6 border-2 border-black bg-yellow-200 rounded-md min-w-[150px] max-w-max h-auto text-center text-2xl'
               key={text}>
               <TaskEntry id={index} >
                 {text}
