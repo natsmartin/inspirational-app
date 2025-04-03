@@ -1,11 +1,13 @@
 import React from 'react'
-import TaskInput from '@components/TaskInput'
+import Task from '@features/todos/Task'
 import TaskEntries from '@components/TaskEntries'
+import Weather from '@features/weather/Weather'
 
 export default function Home() {
   return (
     <div className='flex flex-col justify-center items-center'>
-      <TaskInput />
+      <Weather />
+      <Task />
       <TaskEntries />
     </div>
   )
