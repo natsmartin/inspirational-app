@@ -7,8 +7,7 @@ import { addTodo } from "@features/todos/todoSlice";
 function TaskInput() {
 
 const [newEntry, setNewEntry] = useState("");
-const [totalChar, setTotalChar] = useState();
-const [currentChar, setTCurrentChar] = useState();
+const [currentChar, setTCurrentChar] = useState(50);
 const dispatch = useDispatch();
 
 const onFormSubmit = (e) => {
@@ -25,8 +24,7 @@ const onFormSubmit = (e) => {
 const maxChar = 50
 const handleChange = (e) => {
   const currTotalChar = e.target.value
-  setTotalChar(currTotalChar.length)
-  setTCurrentChar(maxChar - totalChar)
+  setTCurrentChar(maxChar - currTotalChar.length)
   if(currTotalChar.length <= maxChar) {
     setNewEntry(currTotalChar)
   } else {

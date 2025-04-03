@@ -2,7 +2,7 @@ import React from "react";
 
 function WeatherInfo({ weather }) {
   return (
-    <div className="flex text-center justify-center items-center">
+    <div className="flex text-center justify-center items-center mx-2">
       <img
         src={`http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
         alt="current weather icon"
