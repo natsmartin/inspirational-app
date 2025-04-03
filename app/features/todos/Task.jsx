@@ -23,10 +23,10 @@ const onFormSubmit = (e) => {
 }
 const maxChar = 50
 const handleChange = (e) => {
-  const currTotalChar = e.target.value
-  setTCurrentChar(maxChar - currTotalChar.length)
-  if(currTotalChar.length <= maxChar) {
-    setNewEntry(currTotalChar)
+  const currentChar = e.target.value
+  setTCurrentChar(maxChar - currentChar.length)
+  if(currentChar.length <= maxChar) {
+    setNewEntry(currentChar)
   } else {
     window.alert("Maximum number of characters exceed!")
   }
