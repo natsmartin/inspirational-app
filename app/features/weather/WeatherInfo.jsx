@@ -12,6 +12,7 @@ function WeatherInfo({ weather }) {
           {weather.main.temp}°
         </p>
         <p className="capitalize">{weather.weather[0].description}</p>
+        <p className="capitalize">{weather.name + ',' + weather.sys.country}</p>
       </div>
     </div>
   );

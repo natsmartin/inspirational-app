@@ -7,8 +7,10 @@ import WeatherInfo from "@features/weather/WeatherInfo";
 
 function Weather() {
   const [weather, setWeather] = useState({
-    weather: [{ description: "few clouds", icon: "02d" }],
+    weather: [{ description: "--", icon: "02d" }],
     main: { temp: "0.00" },
+    name: "--",
+    sys: { country: "--"}
   });
   const [city, setCity] = useState("Manila");
   const [state, setState] = useState("Manila");
