@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex flex-col">
         <Weather />
       </div>
-      <div className="flex flex-col justify-center items-center">
+      <div className="flex flex-col justify-center items-center p-8">
         <Task />
         <TaskEntries />
         <Background />

@@ -44,6 +44,7 @@ function TaskInput() {
             onChange={handleChange}
           ></input>
           <label
+            id="text-label"
             className="absolute cursor-text px-1 left-2.5 top-2.5 text-slate-600 text-3xl 
             transition-all transform origin-left peer-focus:-top-3 peer-focus:left-2.5 peer-focus:text-xl 
             peer-focus:text-slate-600 peer-focus:scale-90 peer-focus:bg-white"

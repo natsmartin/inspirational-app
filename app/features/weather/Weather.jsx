@@ -49,7 +49,7 @@ function Weather() {
   };
 
   return (
-    <div className="flex self-end p-5 bg-[rgba(0,0,0,0.4)]">
+    <div className="md:flex flex-col self-center md:self-end p-5 bg-[rgba(0,0,0,0.4)]">
       <Suspense fallback={<Loading />}>
         <WeatherInfo weather={weather} />
       </Suspense>
