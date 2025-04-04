@@ -5,9 +5,8 @@ import Weather from "@features/weather/Weather";
 import Background from "@features/background/Background";
 
 export default function Home() {
-
   return (
-    <div id="background-image" className="h-screen">
+    <div className="h-screen">
       <div className="flex flex-col">
         <Weather />
       </div>
