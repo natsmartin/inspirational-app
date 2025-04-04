@@ -4,11 +4,7 @@ import React, { useState, useEffect } from "react";
 import { getBackground } from "@api/BackgroundAPI";
 
 function Background() {
-  const [background, setBackground] = useState({
-    // urls: {
-    //   full: 'https://images.unsplash.com/photo-1741509541812-5d8f3e96df23?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MzI2'
-    // }
-  });
+  const [background, setBackground] = useState({});
 
   useEffect(() => {
     const fetchBackground = async () => {
@@ -16,7 +12,7 @@ function Background() {
       setBackground(response)
     }
     fetchBackground();
-  }, [background])
+  }, [])
 
   const handleClick = async () => {
     const response = await getBackground();
@@ -24,8 +20,8 @@ function Background() {
     console.log(background.urls);
     const imageBg = background.urls.full
     document.getElementById("background-image").style.background = `url(${imageBg}) no-repeat center`;
-    // document.getElementById("background").style.backgroundSize = 'cover';
-    // document.getElementById("background").style.backdropFilter = 'blur(8px)';
+    document.getElementById("background-image").style.backgroundSize = 'cover';
+    document.getElementById("background-image").style.backdropFilter = 'blur(8px)';
   };
 
 
