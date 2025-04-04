@@ -10,7 +10,7 @@ function Weather() {
     weather: [{ description: "--", icon: "02d" }],
     main: { temp: "0.00" },
     name: "--",
-    sys: { country: "--"}
+    sys: { country: "--" },
   });
   const [city, setCity] = useState("Manila");
   const [state, setState] = useState("Manila");
@@ -49,36 +49,43 @@ function Weather() {
   };
 
   return (
-    <div className="flex self-end">
+    <div className="flex self-end p-5 bg-[rgba(0,0,0,0.4)]">
       <Suspense fallback={<Loading />}>
         <WeatherInfo weather={weather} />
       </Suspense>
       <form className="*:m-1 mx-2 flex flex-col" onSubmit={handleFormSubmit}>
         <div className="flex">
-          <label htmlFor="city" className="flex items-center font-semibold mx-2">
+          <label
+            htmlFor="city"
+            className="flex items-center font-semibold mx-2 text-white"
+          >
             City
           </label>
           <input
             id="city-input"
             type="text"
             name="city"
-            className="px-2 border-1 border-slate-500 rounded-md"
+            className="px-2 border-1 border-slate-500 rounded-md bg-slate-300"
           ></input>
         </div>
         <div className="flex">
-          <label htmlFor="state" className="flex items-center font-semibold mx-1">
+          <label
+            htmlFor="state"
+            className="flex items-center font-semibold mx-1 text-white"
+          >
             State
           </label>
           <input
             id="state-input"
             type="text"
             name="state"
-            className="px-2 border-1 border-slate-500 rounded-md"
+            className="px-2 border-1 border-slate-500 rounded-md bg-slate-300"
           ></input>
         </div>
         <button
           type="submit"
-          className="border-2 bg-blue-400 text-white font-semibold border-slate-500 p-1 rounded-sm hover:cursor-pointer hover:border-slate-700"
+          className="border-2 bg-blue-400 text-white font-semibold border-slate-500 p-1 
+            rounded-sm hover:cursor-pointer hover:border-slate-700 transition-all"
           onClick={handleSubmit}
         >
           Get Weather
