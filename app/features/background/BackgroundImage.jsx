@@ -5,7 +5,7 @@ function BackgroundImage({ background }) {
     <div className="absolute z-[-1] md:w-screen md:h-screen">
       <img
         src={background?.urls.full}
-        className="fixed z-0 blur-xs min-w-max md:min-w-fit h-screen"
+        className="fixed z-0 blur-xs min-w-max md:min-w-full h-fu"
         id="background-image"
         alt={background?.alt_description}
       ></img>
