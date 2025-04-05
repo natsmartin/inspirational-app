@@ -23,11 +23,9 @@ function TaskInput() {
   const maxChar = 50;
   const handleChange = (e) => {
     const currentChar = e.target.value;
-    setTCurrentChar(maxChar - currentChar.length);
     if (currentChar.length <= maxChar) {
+      setTCurrentChar(maxChar - currentChar.length);
       setNewEntry(currentChar);
-    } else {
-      window.alert("Maximum number of characters exceed!");
     }
   };
 
@@ -51,7 +49,9 @@ function TaskInput() {
           >
             What are your plans today?
           </label>
-          <p className="flex justify-end text-sm text-slate-900 absolute right-2.5 bottom-1">{currentChar} characters remaining</p>
+          <p className="flex justify-end text-sm text-slate-900 absolute right-2.5 bottom-1">
+            {currentChar} characters remaining
+          </p>
         </div>
       </form>
     </div>
