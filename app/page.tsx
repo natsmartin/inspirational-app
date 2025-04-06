@@ -7,7 +7,7 @@ import Quote from "@features/quote/Quote"
 
 export default function Home() {
   return (
-    <div className="h-full w-full flex flex-col justify-center">
+    <div className="w-full flex flex-col justify-center">
       <div className="flex flex-col">
         <Weather />
       </div>
