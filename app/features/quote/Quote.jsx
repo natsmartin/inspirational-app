@@ -42,9 +42,9 @@ function Quote() {
 
   return (
     <>
-      <p className="md:text-lg text-xs w-full text-center bg-[rgba(255,255,255,0.4)] p-2">
+      <p className="md:text-lg text-xs w-full text-center text-slate-900 bg-[rgba(255,255,255,0.4)] p-2">
         -- New quote in&nbsp;
-        <span className="font-bold">{count}s</span> --
+        <span className="font-bold text-gray-900">{count}s</span> --
       </p>
       <div className="bg-[rgba(0,0,0,0.4)] px-10 md:px-5 py-4 w-full flex justify-center items-center">
         <br />
