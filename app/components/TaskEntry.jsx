@@ -7,9 +7,9 @@ function TaskEntry({ children, id }) {
 
   return (
     <div className="relative">
-        <button className="absolute top-[-32px] right-[-25px] text-xs bg-red-400 
-          opacity-80 p-1 rounded-md
-          hover:cursor-pointer hover:opacity-100"
+        <button className="absolute top-[-32px] right-[-30px] text-xs bg-red-400 border-2 border-slate-300
+          opacity-80 px-1 rounded-md hover:scale-125 hover:transition-all hover:font-semibold
+          hover:cursor-pointer hover:opacity-100 hover:border-white"
           onClick={() => dispatch(deleteTodo(id))}
           >Remove
         </button>
