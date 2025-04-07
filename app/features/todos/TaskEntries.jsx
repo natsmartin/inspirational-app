@@ -27,11 +27,13 @@ function TaskEntries() {
           </li>
         ))}
       </ul>
-      <DeleteButton
-        className="float-right mx-3 my-2 px-4 py-1 font-bold text-md bg-red-500"
-          label='Clear'
+      {todos.length > 1 ? (
+        <DeleteButton
+          className="float-right mx-3 my-2 px-4 py-1 font-bold text-md bg-red-500"
+          label="Clear"
           onClick={() => dispatch(clearTodo(todos.length))}
-      />
+        />
+      ) : null}
     </div>
   );
 }
