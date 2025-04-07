@@ -1,6 +1,6 @@
 import React from "react";
 import Task from "@features/todos/Task";
-import TaskEntries from "@components/TaskEntries";
+import TaskEntries from "@features/todos/TaskEntries";
 import Weather from "@features/weather/Weather";
 import Background from "@features/background/Background";
 import Quote from "@features/quote/Quote"

@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch, useAppSelector } from "@utils/hooks";
 import { addTodo } from "@features/todos/todoSlice";
 
 function TaskInput() {
   const [newEntry, setNewEntry] = useState("");
   const [currentChar, setTCurrentChar] = useState(50);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const onFormSubmit = (e) => {
     e.preventDefault();
