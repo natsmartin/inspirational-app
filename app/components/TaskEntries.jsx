@@ -8,6 +8,10 @@ function TaskEntries() {
 
   const { todos } = useSelector((state) => state.todo);
 
+  if(!todos.length) {
+    return
+  }
+
   return (
     <div className='w-full min-w-[60%] max-w-sm h-auto bg-[rgba(255,165,0,0.4)] rounded-md'>
       <ul className='flex flex-wrap p-6'>
