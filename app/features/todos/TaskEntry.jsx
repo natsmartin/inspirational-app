@@ -9,7 +9,7 @@ function TaskEntry({ children, id }) {
   return (
     <div className="relative">
       <DeleteButton
-        className="absolute top-[-32px] right-[-30px] p-1 text-xs bg-red-400"
+        className="absolute top-[-32px] right-[-30px] py-1 text-xs bg-red-400"
         label="Remove"
         onClick={() => dispatch(deleteTodo(id))}
       />
