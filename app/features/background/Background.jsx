@@ -4,14 +4,21 @@ import React, { useState, useEffect, Suspense } from "react";
 import { getBackground } from "@api/BackgroundAPI";
 import Loading from "@app/loading"
 import BackgroundImage from "@features/background/BackgroundImage"
+import Modal from "@components/Modal"
 
 function Background() {
   const [background, setBackground] = useState(null);
+  const [error, setError] = useState();
+  const [display, setDisplay] = useState("hidden");
 
   useEffect(() => {
     const fetchBackground = async () => {
       const response = await getBackground();
-      setBackground(response);
+      if(response.errors) {
+        setError(response.errors);
+      } else {
+        setBackground(response);
+      }
     };
       fetchBackground();
   }, []);
@@ -19,11 +26,11 @@ function Background() {
   const handleClick = async () => {
     const response = await getBackground();
     setBackground(response);
-    console.log(background);
   };
 
   return (
     <>
+      <Modal id="bg-modal" onClick={() => {setDisplay("hidden")}} error={error} display={display}/> 
       <Suspense fallback={<Loading />}>
         <BackgroundImage background={background} />
       </Suspense>

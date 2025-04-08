@@ -12,11 +12,9 @@ function Quote() {
   const fetchQuote = async () => {
     const response = await getQuote();
     setQuote(response);
-    console.log(response);
   };
 
   useEffect(() => {
-    // setTimeout(() => fetchQuote(), delay * 1000);
     const interval = setInterval(() => {
       fetchQuote();
     }, delay * 1000);
@@ -35,10 +33,6 @@ function Quote() {
   if (count === 0) {
     setCount(delay);
   }
-
-  // if (!quote) {
-  //   return;
-  // }
 
   return (
     <>
