@@ -19,7 +19,7 @@ function TaskEntries() {
       <ul className="flex flex-wrap p-6">
         {todos?.map(({ text }, index) => (
           <li
-            className="m-1 p-6 border-2 border-black bg-yellow-200 rounded-md 
+            className="m-1 p-6 border-2 border-black bg-yellow-200 rounded-md text-black
               min-w-[150px] max-w-max h-auto text-center text-2xl"
             key={text}
           >
